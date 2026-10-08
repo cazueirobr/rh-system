@@ -1,0 +1,164 @@
+:root {
+    --verde: #1b9c57;
+    --verde-escuro: #157a44;
+    --verde-claro: #e8f7ee;
+    --branco: #ffffff;
+    --cinza-texto: #2d3a33;
+    --cinza-borda: #dfe7e2;
+    --vermelho: #c0392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4faf6;
+    color: var(--cinza-texto);
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Topo */
+.topo {
+    background: var(--branco);
+    border-bottom: 3px solid var(--verde);
+}
+.topo-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.marca {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--verde);
+    text-decoration: none;
+}
+.marca span { color: var(--cinza-texto); font-weight: 600; }
+.nav a {
+    margin-left: 16px;
+    color: var(--cinza-texto);
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav a:hover { color: var(--verde); }
+.btn-link {
+    background: var(--verde);
+    color: var(--branco) !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+.btn-link:hover { background: var(--verde-escuro); }
+
+/* Conteúdo */
+.conteudo { padding: 28px 16px 60px; }
+
+.hero { text-align: center; margin-bottom: 24px; }
+.hero h1 { color: var(--verde); margin-bottom: 6px; }
+.sub { color: #5b6b62; margin-top: 0; }
+
+.card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 10px;
+    padding: 24px;
+    margin: 0 auto 20px;
+    box-shadow: 0 2px 10px rgba(27, 156, 87, 0.06);
+}
+.card-estreito { max-width: 420px; }
+.card h2 { margin-top: 0; color: var(--verde-escuro); }
+.card-sucesso { text-align: center; border-color: var(--verde); }
+.card-sucesso h2 { color: var(--verde); }
+
+/* Formulários */
+.form label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.form input:focus { outline: 2px solid var(--verde); border-color: var(--verde); }
+
+.btn {
+    display: inline-block;
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover { background: var(--verde-escuro); }
+.btn-bloco { width: 100%; }
+.btn-mini { padding: 6px 12px; font-size: 0.85rem; }
+.btn-ok { background: var(--verde); }
+.btn-no { background: var(--vermelho); }
+.btn-no:hover { background: #a2301f; }
+
+/* Alertas */
+.alerta {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+.alerta-sucesso { background: var(--verde-claro); color: var(--verde-escuro); border: 1px solid var(--verde); }
+.alerta-erro { background: #fdecea; color: var(--vermelho); border: 1px solid var(--vermelho); }
+
+/* Tabela */
+.tabela { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.tabela th, .tabela td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--cinza-borda);
+    font-size: 0.92rem;
+}
+.tabela th { color: var(--verde-escuro); }
+.tabela a { color: var(--verde); font-weight: 600; }
+.form-acao { display: flex; gap: 6px; margin: 0; }
+
+.status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.status-aprovado { background: var(--verde-claro); color: var(--verde-escuro); }
+.status-negado   { background: #fdecea; color: var(--vermelho); }
+.status-neutro   { background: #eef1f0; color: #5b6b62; }
+
+.vazio { color: #8a978f; font-style: italic; }
+
+/* Rodapé */
+.rodape {
+    border-top: 1px solid var(--cinza-borda);
+    background: var(--branco);
+    padding: 18px 0;
+    text-align: center;
+    color: #8a978f;
+}
